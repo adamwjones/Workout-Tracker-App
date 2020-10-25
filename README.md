@@ -1,57 +1,63 @@
-# Unit 17 Nosql Homework: Workout Tracker
+# Workout-Tracker App
 
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic%202.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)
 
-## User Story
+## Watch video here
+//To be updated
 
-* As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+## Description
+This application allows the user to track their fitness progress by creating new workout plans, adding exercises to existing workout plans, and viewing the combined weight of multiple exercises on the “stats” page.
 
-## Business Context
+The frontend code was provided for this project. The backend utilizes a Mongo database with a Mongoose schema and handles routes with Express.
 
-A consumer will reach their fitness goals more quickly when they track their workout progress.
+## Table of Contents
 
-## Acceptance Criteria
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contribution](#contribution)
+- [Test](#test)
+- [License](#license)
+- [Questions](#questions) 
+- [Screenshots](#screenshots)
 
-When the user loads the page, they should be given the option to create a new workout or continue with their last workout.
+### Installation
+Please follow these unique installation instructions (if necessary): Make sure to run npm install and all dependencies including: "express" and "mongoose"
 
-The user should be able to:
 
-  * Add exercises to a previous workout plan.
+### Usage
+This application’s code is free to use following the terms of the license identified. Additional usage instructions are: Same as license 
 
-  * Add new exercises to a new workout plan.
+### Contribution
+This applicating was made by Adam Jones with the assistance of Benjamin Benson (a tutor for the Rutgers Full Stack Coding Bootcamp).
 
-  * View the combined weight of multiple exercises on the `stats` page.
+### Test 
+I would not trust my code (or any code) without testing it myself. Please consider performing the following testing on this application prior to use: Take a look to validate that it worked before blindly pushing it to GitHub
 
-To deploy an application with a MongoDB database to Heroku, you'll need to set up a MongoDB Atlas account and connect a database from there to your application. Be sure to use the following guides for support:
+### License               
+This application is covered under the terms of the Artistic License 2.0 
+Pease refer to their site for more details of the terms of use permittable.
 
-  * [Set Up MongoDB Atlas](../04-Supplemental/MongoAtlas-Setup.md)
+### Questions
 
-  * [Deploy with Heroku and MongoDB Atlas](../04-Supplemental/MongoAtlas-Deploy.md)
+* If you have any questions or comments regarding this project, please contact me at adam.w.jones2@gmail.com and I will try to reply as soon as possible. 
 
-## Commit Early and Often
+* If you liked this project, please check out my GitHub page at adamwjones to see more of my work.
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for the following two reasons:
+### Screenshots
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills.
+* Create a workout plan
 
-2. Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
+<img src="public/images/fitnessAppPic1.png" width="700px">
 
-Follow these guidelines for committing:
+* Add exercises to a workout plan
 
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
+<img src="public/images/fitnessAppPic2.png " width="700px">
 
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
+* View the combined weight of multiple exercises
 
-* Don't commit half-done work, for the sake of your collaborators (and your future self!).
+<img src="public/images/fitnessAppPic3.png " width="700px">
 
-* Test your application before you commit to ensure functionality at every step in the development process.
+* NoSQL Mongo database
 
-We want you to have well over 200 commits by graduation, so commit early and often!
-
-## Submission on BCS
-
-You are required to submit the following:
-
-* The URL to the deployed application
-
-* The URL to the GitHub repository
+<img src="public/images/fitnessAppPic4.png " width="700px">

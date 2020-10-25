@@ -57,35 +57,35 @@ module.exports = function(app){
           });
       });
 
-    //   app.put("/api/workouts/:id",(req, res) => {
+      app.put("/api/workouts/:id",(req, res) => {
 
-    //     Workout.findOneAndUpdate(
-    //       { _id: req.params.id }, 
-    //       { $push: { exercises: req.body  } },
+        Workout.findOneAndUpdate(
+          { _id: req.params.id }, 
+          { $push: { exercises: req.body  } },
       
-    //     )
+        )
       
-    //   .then(data=>{
-    //       console.log("data", data)
-    //       res.json(data)
-    //     })
-    //     .catch(err => {
-    //       res.json(err);
-    //     });
+      .then(data=>{
+          console.log("data", data)
+          res.json(data)
+        })
+        .catch(err => {
+          res.json(err);
+        });
       
          
        
-    //   });
+      });
 
-    app.put("/api/workouts/:id", ({body, params}, res) => {
-        db.Workout.findByIdAndUpdate( params.id, { $push: {exercises: body} }, { new: true })
-         .then(workout => {
-           res.json(workout);
-         })
-         .catch(err => {
-           res.json(err);
-         });
-       })
+    // app.put("/api/workouts/:id", ({body, params}, res) => {
+    //     db.Workout.findByIdAndUpdate( params.id, { $push: {exercises: body} }, { new: true })
+    //      .then(workout => {
+    //        res.json(workout);
+    //      })
+    //      .catch(err => {
+    //        res.json(err);
+    //      });
+    //    })
       
 
 }
