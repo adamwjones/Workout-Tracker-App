@@ -1,7 +1,7 @@
 //const  Workout  = require("../models");
 const path = require("path");
 var db = require("../models");
-var { Workout } = require("../models");
+//var Workout = require("../models/workout.js");
 
 module.exports = function(app){
     app.get("/", (req, res) => {
@@ -47,8 +47,7 @@ module.exports = function(app){
       });
 
       app.post("/api/workouts", ({ body }, res) => {
-        db.Workout.create(body)
-          .then(({ _id }) => db.Workout.findOneAndUpdate({}, { $push: { notes: _id } }, { new: true }))
+        db.Workout.create({})
           .then(data => {
             res.json(data);
           })
@@ -57,35 +56,19 @@ module.exports = function(app){
           });
       });
 
-      app.put("/api/workouts/:id",(req, res) => {
-
-        Workout.findOneAndUpdate(
-          { _id: req.params.id }, 
-          { $push: { exercises: req.body  } },
-      
-        )
-      
-      .then(data=>{
-          console.log("data", data)
-          res.json(data)
-        })
-        .catch(err => {
-          res.json(err);
-        });
-      
-         
-       
-      });
-
-    // app.put("/api/workouts/:id", ({body, params}, res) => {
-    //     db.Workout.findByIdAndUpdate( params.id, { $push: {exercises: body} }, { new: true })
-    //      .then(workout => {
-    //        res.json(workout);
-    //      })
-    //      .catch(err => {
-    //        res.json(err);
-    //      });
-    //    })
+    app.put("/api/workouts/:id", ({body, params}, res) => {
+      console.log(params.id);  
+      console.log("sup dawg it works!");  
+      console.log(body);       
+      db.Workout.findByIdAndUpdate( params.id, { $push: { exercises: body } }, { new: true })
+         .then(workout => {
+           console.log(workout)
+           res.json(workout);
+         })
+         .catch(err => {
+           res.json(err);
+         });
+       })
       
 
 }

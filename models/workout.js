@@ -22,14 +22,14 @@ const workoutSchema = new Schema(
         },
         duration: {
           type: Number,
-          trim: true,
+          //trim: true,
           required: "Enter the duration in minutes",
         },
         weight: {
           type: Number,
-          required: function(){
-              return this.type === "resistance"
-          }
+          // required: function(){
+          //     return this.type === "resistance"
+          // }
         },
         reps: {
           type: Number,
