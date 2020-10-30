@@ -13,18 +13,20 @@ app.use(express.json());
 app.use(express.static("public"));
 
 mongoose.connect(
-    process.env.MONGODB_URI || 'mongodb://localhost/workout-tracker-app',
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-      useFindAndModify: false
-    }
-  );
+  process.env.MONGODB_URI || "mongodb://localhost/workout-tracker-app",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  },
+  function (err) {
+    if (err) throw err;
+  }
+);
 
 require("./routes/apiRoutes.js")(app);
 require("./routes/htmlRoutes.js")(app);
-
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
