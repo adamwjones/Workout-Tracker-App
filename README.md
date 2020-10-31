@@ -5,6 +5,9 @@
 ## Watch video here
 //To be updated//
 
+## Deployed App on Heroku
+https://gentle-ridge-67984.herokuapp.com/?id=5f9da6ada05e7d0017f98a93
+
 ## Description
 This application allows the user to track their fitness progress by creating new workout plans, adding exercises to existing workout plans, and viewing the combined weight of multiple exercises on the “stats” page.
 
