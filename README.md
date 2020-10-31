@@ -3,7 +3,7 @@
 [![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic%202.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)
 
 ## Watch video here
-//To be updated
+//To be updated//
 
 ## Description
 This application allows the user to track their fitness progress by creating new workout plans, adding exercises to existing workout plans, and viewing the combined weight of multiple exercises on the “stats” page.
